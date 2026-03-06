@@ -76,29 +76,103 @@ console.log(dados());
 
 // Crie uma função para verificar se um valor é Truthy
 
+var carro = 'verde';
+
+function valorVerdadeiro(){
+    if (!!carro === true){
+        console.log('carro é verdadeiro');
+    } else {
+        console.log('carro é falso');
+    }
+}
+
+console.log(valorVerdadeiro());
+
+//ou
+
+function testeVerdade(dado){
+    return !!dado;
+}
+
+console.log(testeVerdade(2));
+
 // Crie uma função matemática que retorne o perímetro de um quadrado
 // lembrando: perímetro é a soma dos quatro lados do quadrado
+var lados = 5;
+
+function ladoQuadrado(){
+    lados = lados * 4;
+    return lados;
+}
+console.log(ladoQuadrado());
+
+//ou
+
+function perimetro(lado){
+    return lado * 4;
+}
+console.log(perimetro());
 
 // Crie uma função que retorne o seu nome completo
 // ela deve possuir os parâmetros: nome e sobrenome
+var primeiroNome = 'rafael';
+var segundoNome = 'ferreira'
+
+function nomeCompleto(nome){
+    nome = primeiroNome + ' ' + segundoNome;
+    return nome;
+}
+
+console.log(nomeCompleto());
+
+//ou
+
+function completoNome(nome, sobrenome){
+    return `${nome} ${sobrenome}`;
+}
+console.log(completoNome('rafael', 'ferreira'));
 
 // Crie uma função que verifica se um número é par
 
+function isEven(numero){
+    var modulo = numero % 2;
+    if (modulo === 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isEven(4));
+
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
+
+function tipoDados(palavra){
+    return typeof palavra;
+}
+
+console.log(tipoDados(true));
 
 // addEventListener é uma função nativa do JavaScript
 // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
 // utilize essa função para mostrar no console o seu nome completo
 // quando o evento 'scroll' ocorrer.
 
+addEventListener('scroll', function() { 
+    console.log('rafael');
+});
+
 // Corrija o erro abaixo
-function precisoVisitar(paisesVisitados) {
+
   var totalPaises = 193;
+
+
+function precisoVisitar(paisesVisitados) {
+  //var totalPaises = 193;
   return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
 }
 function jaVisitei(paisesVisitados) {
+  //var totalPaises = 193;
   return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
 }
-precisoVisitar(20);
-jaVisitei(20);
+console.log(precisoVisitar(20), jaVisitei(20));

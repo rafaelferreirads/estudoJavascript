@@ -9,7 +9,7 @@ if (idioma === 'pt-BR'){
 
 console.log(navigator.languages);
 
-// Retorne o url da página atual utilizando o objeto window
+// Retorne o url da página atual utilizando o objeto win dow
 const hrefPagina = location.href;
 console.log(hrefPagina);
 
